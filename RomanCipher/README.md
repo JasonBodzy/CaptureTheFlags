@@ -4,8 +4,8 @@ The Roman Cipher is a method of encryption that encrypts text based on a designa
 along the alphabat. A shift value of 3 would push every letter in a given text 3 letters down the alphabet.
 
 EX: Shift Value 3:
-A -> D
-B -> E
+A -> D, 
+B -> E, 
 C - > F
 
 The program I wrote is able to take any encrypted input and test encrypt it using all shift valeus. By printing each shift value, the user can 
