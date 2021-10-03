@@ -20,7 +20,7 @@ public class xorConversion {
         for(int i = 0; i < 256; i++){
             System.out.println("        " + i);
             for(int j = 0; j < input.length(); j++){
-                System.out.print((char)(input.charAt(j) ^ i));
+                System.out.print((char)(input.charAt(j) ^ i)); //Converts xor'd value to character
             }
 
 
