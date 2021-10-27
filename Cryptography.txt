@@ -1,0 +1,70 @@
+Cryptography: how we can secure communication against an adversary
+
+For CTF we are the adversary
+
+Plaintext: ordinary info, the message to be encrypted	
+Ciphertext: encrypted text, means nothing
+Encryption Function (E): converts plaintext to cipher text
+Decryption Function (D): Converts cipher text to plaintext
+
+Substitution ciphers:
+Uses 2 alphabets that correspond to each other -> Map E(P) = C
+Can use shifts (i.e. shift 13)
+A -> N
+B -> O
+C -> P
+...
+
+Shift ciphers "wrap" around the alphabet
+You can use mod to make this easier
+E(x) = x + n mod 26
+
+Modular math makes cryptography hard
+
+=== (is congruent to)
+
+A === b mod n
+
+0 === 2 === 4 === 6
+
+Xor exists 
+You can have an identity element or force them somewhere
+Xor is commutative and associative
+
+Xor can create a one-time pad
+It uses a private key to encrypt and it is used to decrypt 
+
+E(P,K) = P xor K = C
+
+The key must be truly random
+The key must be longer than the plaintext
+The key cannot be reused
+
+Data representation:
+Binary 1001000 can be prefixed with 0b
+Hexadecimal 0-9 A-F prefixed with 0x
+Base64 encoding format (used often to condense info) has "==" padding at end sometimes
+
+Practice: github.com/andrewfhou/bootcamp-2021-crypto/
+Xor practice: github.com/andrewfhou/bootcamp-2021-crypto/
+Practice	
+C: 69636e68747c3e61683e6a506d767b3c50773f7d72
+P: flag{s1ng1e_byt3_x0r}        16
+
+1. Convert Binary to ASCII w/ python
+C: 01101111 01101110 01100101 01110011 00100000 01100001 01101110 01100100 00100000 01111010 01100101 01110010 01101111 01110011
+P: ones and zeros
+
+2. Convert Hex to ASCII w/ python
+C: 636F756E74696E6720696E206865782069732030207468726F7567682066
+P: counting in hex is 0 through f
+
+3. Convert base64 w/ bash or python
+C: YmFzZTY0IGRvZXNuJ3QgYWx3YXlzIGVuZCB3aXRoID0sIGJ1dCBpdCdzIGEgdXNlZnVsIHRlbGwK
+P: base64 doesn't always end with =, but it's a useful tell
+
+4. Caesar Cipher
+C: kl hyhubergb! zhofrph wr fubswr!
+P: hi everybody! welcome to crypto!
+
+Cyberchef

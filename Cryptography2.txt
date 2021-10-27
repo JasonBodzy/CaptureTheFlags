@@ -1,0 +1,17 @@
+Public key crypto relies on hard problems 
+Public-private key pair
+A mod N : a * a^-1 = 1 mod N
+
+RSA definition
+Two hidden prime numbers
+p,q
+N = p*q
+
+Cipher text = m^e % N
+Private key is decrypted d^-1 % N
+
+To encrypt it take the power of the message % n, to decrypt do the inverse
+
+practice: github.com/andrewfhou/bootcamp-2021-crypto/
+
+If m^e is less than n, mod n won't do anything and c will be nothing
